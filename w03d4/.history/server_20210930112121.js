@@ -75,7 +75,7 @@ app.get('/protected', (req, res) => {
 
 // // POST routes
 // // PATCH /login
-app.patch('/login', (req, res) => {
+app.post('/login', (req, res) => {
   const testUsername = req.body.username;
   const testPassword = req.body.password;
 

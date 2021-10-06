@@ -19,7 +19,7 @@ app.use(cookieSession({
   keys: ['my secret key', 'yet another secret key']
 }));
 
-app.use(methodOverride('_method'));
+// app.use(methodOverride('_method'));
 
 // app.use((req, res, next) => {
 //   if (req.query._method) {
@@ -75,7 +75,7 @@ app.get('/protected', (req, res) => {
 
 // // POST routes
 // // PATCH /login
-app.patch('/login', (req, res) => {
+app.post('/login', (req, res) => {
   const testUsername = req.body.username;
   const testPassword = req.body.password;
 

@@ -75,16 +75,16 @@ app.get('/protected', (req, res) => {
 
 // // POST routes
 // // PATCH /login
-app.patch('/login', (req, res) => {
-  const testUsername = req.body.username;
-  const testPassword = req.body.password;
+app.post('/login', (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
 
-  const user = users[testUsername];
+  const user = users[username];
   if (!user) {
     return res.status(401).send('No user with that username found');
   }
 
-  bcrypt.compare(testPassword, user.password)
+  bcrypt.compare(password, user.password)
     .then((result) => {
       if (result) {
         // res.cookie('username', user.username);
@@ -105,12 +105,12 @@ app.post('/register', (req, res) => {
     .then((salt) => {
       return bcrypt.hash(password, salt);
     })
-    .then((hash) => {
+    .then((password) => {
       users[username] = {
         username,
-        password: hash
+        password
       };
-      console.log('users:',users);
+      console.log(users);
       res.redirect('/login');
     });
 });

@@ -22,6 +22,6 @@ const hash = '$2b$10$JHVvbryWHKHDJRoR8v3l8exjeiDG4ZkH1czi/r3nblXS1GfaVnzzC';
 
 bcrypt.compare('abcd', hash)
   .then((result) => {
-    console.log('do the passwords match? ', result);
+    console.log('do the passwords match?', result);
   });
 

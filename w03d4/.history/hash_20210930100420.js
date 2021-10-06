@@ -18,7 +18,7 @@ bcrypt.genSalt(10)
     console.log('hash:', hash);
   });
 
-const hash = '$2b$10$JHVvbryWHKHDJRoR8v3l8exjeiDG4ZkH1czi/r3nblXS1GfaVnzzC';
+const hash = '$2b$10$JHVvbryWHKHDJRoR8v3l8exjeiDG4ZkH1czi/r3nblXS1GfaVnzzc';
 
 bcrypt.compare('abcd', hash)
   .then((result) => {
