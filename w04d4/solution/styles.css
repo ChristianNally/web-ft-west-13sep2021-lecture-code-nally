@@ -1,18 +1,13 @@
 p {
-  width: 50%;
-}
+  width: 50%; }
 
 .first {
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 .second {
-  font-size: 2em;
-}
+  font-size: 2em; }
 
 #main {
-  font-size: 2em;
-}
-#main p {
-  background-color: purple;
-}
+  font-size: 2em; }
+  #main p {
+    background-color: purple; }
